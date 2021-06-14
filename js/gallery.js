@@ -7,10 +7,11 @@ const onCloseBtnLightboxRef = document.querySelector(
   "button[data-action=close-lightbox]"
 );
 
-const methodForCreatMarkup = galleryItems.reduce((string, gallery) => {
-  return (gallery.innerHTML =
-    string +
-    `
+const methodForCreatMarkup = galleryItems.reduce(
+  (string, gallery) =>
+    (gallery.innerHTML =
+      string +
+      `
     <li class="gallery__item">
       <a class="gallery__link" href="${gallery.original}">
         <img
@@ -20,8 +21,9 @@ const methodForCreatMarkup = galleryItems.reduce((string, gallery) => {
           alt="${gallery.description}"
         />
       </a>
-    </li>`);
-}, "");
+    </li>`),
+  ""
+);
 
 galleryStorageList.insertAdjacentHTML("afterbegin", methodForCreatMarkup);
 
