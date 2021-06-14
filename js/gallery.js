@@ -38,6 +38,7 @@ function modalOpenMethod(evt) {
   lightboxRef.classList.add("is-open");
   onLightboxContentRef.src = evt.target.dataset.source;
   onLightboxContentRef.alt = evt.target.alt;
+  document.body.style.overflow = "hidden";
 }
 
 onCloseBtnLightboxRef.addEventListener("click", modalCloseMethod);
