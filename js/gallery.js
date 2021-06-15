@@ -42,11 +42,7 @@ function modalOpenMethod(evt) {
 
 onCloseBtnLightboxRef.addEventListener("click", modalCloseMethod);
 
-function modalCloseMethod(evt) {
-  if (evt.target.dataset.action !== "close-lightbox") {
-    return;
-  }
-
+function modalCloseMethod() {
   lightboxRef.classList.remove("is-open");
   onLightboxContentRef.src = "";
   onLightboxContentRef.alt = "";
